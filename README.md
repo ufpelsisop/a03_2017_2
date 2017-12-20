@@ -25,8 +25,8 @@ Normalmente, para implementar um sistema de arquivos é necessário ter acesso d
 
 O sistema de arquivos está organizado da seguinte forma:
 
-- _Boot block_: 1 bloco que conteria o _bootloader_ e que não deve ser usado;
-- _Super block_: 1 bloco que contém informações sobre o sistema de arquivos; 
+- _Boot block_: 512 bytes que conteria o _bootloader_ e que não deve ser usado;
+- _Super block_: 1 bloco que contém informações sobre o sistema de arquivos (informação deve estar no início do bloco);   
 - _i-node bitmap_: blocos contendo um bit para cada bloco de dados dizendo se estão livres (0) ou ocupados (1);
 - _directory_: blocos contendo 256 entradas com descritores de arquivos;
 - _data_: blocos usados para armazenar dados de arquivos

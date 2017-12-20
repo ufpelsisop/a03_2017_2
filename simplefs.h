@@ -26,9 +26,10 @@ typedef int indice_fs_t;
  *
  *  @param arquivo nome do arquivo no sistema de arquivos hospedeiro
  *  @param blocos número de blocos do arquivo
+ *  @param tam_bloco tamanho de um bloco (deve ser pot. de 2 e maior ou igual a 512)
  *  @return SUCESSO ou FALHA
  */
-int initfs(char * arquivo, int blocos);
+int initfs(char * arquivo, int blocos, int tam_bloco);
 
 
 /** Abre um sistema de arquivos.
